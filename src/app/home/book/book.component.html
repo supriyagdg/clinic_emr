@@ -1,0 +1,567 @@
+<!--<form [formGroup]="frmStepper" (submit)="submit()">
+  <app-book-stepper #cdkStepper formArrayName="steps" [linear]="isLinear">
+    <cdk-step [editable]="isEditable" formGroupName="0" [stepControl]="formArray.get([0])">
+      <ng-template cdkStepLabel>
+        <span class="icon is-medium">
+          <fa-icon [icon]="faPerson" size="fa-lg"></fa-icon>
+        </span>
+        <span>Personal Details</span>
+      </ng-template>
+      <div class="container"> -->
+       <!-- <div class="field is-horizontal"> 
+          <div class="field-body">
+            <div class="field">
+              <label class="label">First Name</label>
+              <p class="control is-expanded has-icons-right">
+                <input formControlName="firstName" class="input" type="text" placeholder="First Name">
+                <span class="icon is-small is-right">
+                  <i class="fas fa-check"></i>
+                </span>
+              </p>
+            </div>
+            <div class="field">
+              <label class="label">Last Name</label>
+              <p class="control is-expanded has-icons-right">
+                <input formControlName="lastName" class="input" type="text" placeholder="Last Name">
+                <span class="icon is-small is-right">
+                  <i class="fas fa-check"></i>
+                </span>
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="field">
+          <label class="label">Email Address</label>
+          <div class="control has-icons-right">
+            <input formControlName="email" class="input" type="text" placeholder="Text input">
+            <span class="icon is-small is-right">
+              <i class="fas fa-check"></i>
+            </span>
+          </div>
+        </div> -->
+
+
+
+
+  
+
+
+
+<div class="content" style="min-height: 206.906px;">
+  <div class="container">
+    <div class="row">
+      <div class="col-12">
+        <div class="card">
+          <div class="card-body">
+            <div class="booking-doc-info">
+              <a href="#" class="booking-doc-img">
+                <img src="assets/doctor-thumb-02.jpg" alt="User Image" class="imgpro">
+              </a> &nbsp;&nbsp;
+              <div class="booking-info">
+                <h4><a href="#" class="drname">Dr. Darren Elder</a></h4>
+                <div class="rating">
+                  <span class="fa fa-star checked"></span>
+                  <span class="fa fa-star checked"></span>
+                  <span class="fa fa-star checked"></span>
+                  <span class="fa fa-star checked"></span>
+                  <span class="fa fa-star unchecked"></span>
+                  <span class="d-inline-block average-rating">35</span>
+                </div>
+                <p class="text-muted mb-0"><i class="fa fa-map-marker-alt"></i> Newyork, USA</p>
+              </div>
+            </div>
+          </div>
+        </div> <br><br>
+        <div class="row">
+          <div class="col-12 col-sm-4 col-md-6">
+            <h4 class="mb-1">11 November 2023</h4>
+            <p class="text-muted">Monday</p>
+          </div>
+          <div class="col-12 col-sm-8 col-md-6 text-sm-end">
+            <div class="bookingrange btn btn-white btn-sm mb-3">
+              <!-- <i class="fa fa-calendar"></i> -->
+             <span><input type="date" name="date" class="datePicker"></span>
+              <!-- <span>September 10, 2023 - September 16, 2023</span> -->
+              <!-- <i class="fa fa-chevron-down ms-2"></i> -->
+            </div>
+          </div>
+        </div>
+
+        <div class="card booking-schedule schedule-widget"   *ngIf="calender">
+
+          <div class="schedule-header">
+            <div class="row">
+              <div class="col-md-12">
+
+                <div class="day-slot">
+                  <ul>
+                    <li class="left-arrow">
+                      <i class="fa fa-chevron-left"></i>
+                    </li>
+                    <li>
+                      <span>Mon</span>
+                      <span class="slot-date">11 Nov <small class="slot-year">2023</small></span>
+                    </li>
+                    <li>
+                      <span>Tue</span>
+                      <span class="slot-date">12 Nov <small class="slot-year">2023</small></span>
+                    </li>
+                    <li>
+                      <span>Wed</span>
+                      <span class="slot-date">13 Nov <small class="slot-year">2023</small></span>
+                    </li>
+                    <li>
+                      <span>Thu</span>
+                      <span class="slot-date">14 Nov <small class="slot-year">2023</small></span>
+                    </li>
+                    <li>
+                      <span>Fri</span>
+                      <span class="slot-date">15 Nov <small class="slot-year">2023</small></span>
+                    </li>
+                    <li>
+                      <span>Sat</span>
+                      <span class="slot-date">16 Nov <small class="slot-year">2023</small></span>
+                    </li>
+                    <li>
+                      <span>Sun</span>
+                      <span class="slot-date">17 Nov <small class="slot-year">2023</small></span>
+                    </li>
+                    <li class="right-arrow">
+                      <i class="fa fa-chevron-right"></i>
+                    </li>
+                  </ul>
+                </div>
+
+              </div>
+            </div>
+          </div>
+
+
+          <div class="schedule-cont">
+            <div class="row">
+              <div class="col-md-12">
+
+                <div class="time-slot">
+                  <ul class="clearfix">
+                    <li>
+                      <a class="timing" href="#">
+                        <span>9:00</span> <span>AM</span>
+                      </a>
+                      <a class="timing" href="#">
+                        <span>10:00</span> <span>AM</span>
+                      </a>
+                      <a class="timing" href="#">
+                        <span>11:00</span> <span>AM</span>
+                      </a>
+                    </li>
+                    <li>
+                      <a class="timing" href="#">
+                        <span>9:00</span> <span>AM</span>
+                      </a>
+                      <a class="timing" href="#">
+                        <span>10:00</span> <span>AM</span>
+                      </a>
+                      <a class="timing" href="#">
+                        <span>11:00</span> <span>AM</span>
+                      </a>
+                    </li>
+                    <li>
+                      <a class="timing" href="#">
+                        <span>9:00</span> <span>AM</span>
+                      </a>
+                      <a class="timing" href="#">
+                        <span>10:00</span> <span>AM</span>
+                      </a>
+                      <a class="timing" href="#">
+                        <span>11:00</span> <span>AM</span>
+                      </a>
+                    </li>
+                    <li>
+                      <a class="timing" href="#">
+                        <span>9:00</span> <span>AM</span>
+                      </a>
+                      <a class="timing" href="#">
+                        <span>10:00</span> <span>AM</span>
+                      </a>
+                      <a class="timing" href="#">
+                        <span>11:00</span> <span>AM</span>
+                      </a>
+                    </li>
+                    <li>
+                      <a class="timing" href="#">
+                        <span>9:00</span> <span>AM</span>
+                      </a>
+                      <a class="timing selected" href="#">
+                        <span>10:00</span> <span>AM</span>
+                      </a>
+                      <a class="timing" href="#">
+                        <span>11:00</span> <span>AM</span>
+                      </a>
+                    </li>
+                    <li>
+                      <a class="timing" href="#">
+                        <span>9:00</span> <span>AM</span>
+                      </a>
+                      <a class="timing" href="#">
+                        <span>10:00</span> <span>AM</span>
+                      </a>
+                      <a class="timing" href="#">
+                        <span>11:00</span> <span>AM</span>
+                      </a>
+                    </li>
+                    <li>
+                      <a class="timing" href="#">
+                        <span>9:00</span> <span>AM</span>
+                      </a>
+                      <a class="timing" href="#">
+                        <span>10:00</span> <span>AM</span>
+                      </a>
+                      <a class="timing" href="#">
+                        <span>11:00</span> <span>AM</span>
+                      </a>
+                    </li>
+                  </ul>
+                </div>
+
+
+              </div>
+            </div>
+          </div>
+
+        </div>
+   
+        <div class="submit-section proceed-btn text-end">
+          <!-- <a href="#" class="btn btn-primary1 submit-btn" *ngIf="" ()>Proceed to Pay</a> -->
+          <button class="btn btn-primary1 submit-btn" (click)="proceedToPay()">Proceed to Pay</button>
+        </div>
+
+
+
+
+
+<div style="height: 540px; border: 1px solid gray; border-radius: 5px;" *ngIf="showForm">
+  
+  <h3 style="margin-top: 20px; margin-left: 20px;">Personal Information</h3> <br>
+
+  <form #frm="ngForm" (ngSubmit)="onSubmit(frm)">
+
+    <div class="row">
+      <div class="col" style="margin-left: 20px;">
+        <div class="did-floating-label-content">
+          <input class="did-floating-input" type="text" name="fname" #fname="ngModel" ngModel>
+          <label class="did-floating-label">First Name</label>
+        </div>
+      </div>
+
+      <div class="col" style="margin-right: 20px;">
+        <div class="did-floating-label-content">
+          <input class="did-floating-input" type="text" name="lname" #lname="ngModel" ngModel>
+          <label class="did-floating-label">Last Name</label>
+        </div>
+      </div>
+
+    </div> 
+    <br><br>
+
+
+    <div class="row">
+      <div class="col" style="margin-left: 20px;">
+        <div class="did-floating-label-content">
+          <input class="did-floating-input" type="text" name="email" #email="ngModel" ngModel>
+          <label class="did-floating-label">Email</label>
+        </div>
+      </div>
+
+      <div class="col" style="margin-right: 20px;">
+        <div class="did-floating-label-content">
+          <input class="did-floating-input" type="text" name="phone" #phone="ngModel" ngModel>
+          <label class="did-floating-label">Phone</label>
+        </div>
+      </div>
+
+    </div> 
+    <br><br>
+  
+    <div class="form-group" style="margin-left: 20px; margin-right: 20px;">
+      <div class="did-floating-label-content">
+        <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" name="review" #review="ngModel" ngModel></textarea>
+        <label class="did-floating-label">Reason</label>
+      </div>
+    </div> <br><br>
+      
+    <div class="submit-section" style="margin-left: 20px;">
+      <!-- <a href="#" class="btn btn-primary submit-btn">Confirm</a> -->
+      <button  class="btn btn-primary1 submit-btn" routerLink="/confirm">Confirm</button>
+    </div>
+
+   </form>
+</div>
+
+
+
+
+
+
+    <!-- <div class="did-floating-label-content">
+      <input class="did-floating-input" type="text" placeholder=" ">
+      <label class="did-floating-label">Sale Price</label>
+    </div>
+  </div> -->
+
+  
+
+
+
+
+
+
+  <div class="content success-page-cont" style="min-height: 206.906px;">
+    <div class="container">
+      <div class="row justify-content-center">
+        <div class="col-lg-6">
+  
+          <div class="card success-card">
+            <div class="card-body">
+              <div class="success-cont">
+                <i class="fa fa-check"></i>
+                <h3>Appointment booked Successfully!</h3>
+                <p>Appointment booked with <strong>Dr. Darren Elder</strong><br> on <strong>12 Nov 2023 5:00PM to
+                    6:00PM</strong></p>
+                <a href="invoice-view.html" class="btn btn-primary view-inv-btn">View Invoice</a>
+              </div>
+            </div>
+          </div>
+  
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        <!-- <footer class="my-footer">
+          <div class="buttons">
+            <button [disabled]="formArray.get([0]).invalid" class="button is-outline is-primary" cdkStepperNext>
+            <span> Next</span>
+              <span class="icon medium">
+                <fa-icon [icon]="faChevronRight" size="fa-lg"> </fa-icon>
+              </span>
+            </button>
+          </div>
+        </footer>
+      </div>
+    </cdk-step>
+    <cdk-step #stepAddress [editable]="isEditable" formGroupName="1" [stepControl]="formArray.get([1])">
+      <ng-template cdkStepLabel>
+        <span class="icon is-medium">
+          <fa-icon [icon]="faAddressBook" size="fa-lg"></fa-icon>
+        </span>
+        <span>Address</span>
+      </ng-template>
+      <div class="container">
+
+        <div class="field">
+          <label class="label">Address One</label>
+          <p class="control is-expanded has-icons-right">
+            <input formControlName="addressOne" class="input" type="text" placeholder="Address One">
+            <span class="icon is-small is-right">
+              <i class="fas fa-check"></i>
+            </span>
+          </p>
+        </div>
+        <div class="field">
+          <label class="label">Address Two</label>
+          <p class="control is-expanded has-icons-right">
+            <input formControlName="addressTwo" class="input" type="text" placeholder="Address Two">
+            <span class="icon is-small is-right">
+              <i class="fas fa-check"></i>
+            </span>
+          </p>
+        </div>
+        <div class="field">
+          <label class="label">City</label>
+          <p class="control is-expanded has-icons-right">
+            <input formControlName="city" class="input" type="text" placeholder="City">
+            <span class="icon is-small is-right">
+              <i class="fas fa-check"></i>
+            </span>
+          </p>
+        </div>
+
+        <div class="field">
+          <label class="label">County/State/Region</label>
+          <div class="control has-icons-right">
+            <input formControlName="county" class="input" type="text" placeholder="County/State">
+            <span class="icon is-small is-right">
+              <i class="fas fa-check"></i>
+            </span>
+          </div>
+        </div>
+        <div class="field">
+          <label class="label">Country</label>
+          <div class="control has-icons-right">
+            <input formControlName="country" class="input" type="text" placeholder="Country">
+            <span class="icon is-small is-right">
+              <i class="fas fa-check"></i>
+            </span>
+          </div>
+        </div>
+
+        <footer class="my-footer">
+          <div class="buttons">
+            <button [disabled]="!isEditable" type="button" class="button is-outline is-warning" cdkStepperPrevious>
+              <span class="icon medium">
+                <fa-icon [icon]="faChevronLeft"> </fa-icon>
+              </span>
+              <span> Previous</span>
+            </button>
+
+            <button [disabled]="formArray.get([1]).invalid" type="button" class="button is-outline is-primary"
+              cdkStepperNext>
+              <span> Next</span>
+              <span class="icon medium">
+                <fa-icon [icon]="faChevronRight" size="fa-lg"> </fa-icon>
+              </span>
+            </button>
+          </div>
+        </footer>
+      </div>
+    </cdk-step>
+    <cdk-step [editable]="isEditable" formGroupName="2" [stepControl]="formArray.get([2])">
+      <ng-template cdkStepLabel>
+        <span class="icon is-medium">
+          <fa-icon [icon]="faCreditCard" size="fa-lg"></fa-icon>
+        </span>
+        <span>Payment Information</span>
+      </ng-template>
+      <div class="container">
+        <div class="field is-horizontal">
+          <div class="field-body">
+            <div class="field">
+              <label class="label">Credit Card Number</label>
+              <p class="control is-expanded has-icons-right">
+                <input formControlName="creditCardNo" class="input" type="text" placeholder="Credit Card No.">
+                <span class="icon is-small is-right">
+                  <i class="fas fa-check"></i>
+                </span>
+              </p>
+            </div>
+            <div class="field">
+              <label class="label">Expiry</label>
+              <p class="control is-expanded has-icons-right">
+                <input formControlName="expiryDate" class="input" type="text" placeholder="10/2020">
+                <span class="icon is-small is-right">
+                  <i class="fas fa-check"></i>
+                </span>
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="field">
+          <label class="label">CVV Code</label>
+          <div class="control has-icons-right">
+            <input formControlName="cvvCode" class="input" type="number" placeholder="CVV Code">
+            <span class="icon is-small is-right">
+              <i class="fas fa-check"></i>
+            </span>
+          </div>
+        </div>
+
+        <footer class="my-footer">
+          <div class="buttons">
+            <button [disabled]="!isEditable" type="button" class="button is-outline is-warning" cdkStepperPrevious>
+              <span class="icon medium">
+                <fa-icon [icon]="faChevronLeft"> </fa-icon>
+              </span>
+              <span> Previous</span>
+            </button>
+
+            <button type="button" class="button is-outline is-danger" (click)="cdkStepper.reset()">
+              <span class="icon medium">
+                <fa-icon [icon]="faBan"> </fa-icon>
+              </span>
+              <span>Reset</span>
+            </button>
+
+            <button type="submit" [disabled]="frmStepper.invalid" class="button is-outline is-primary">
+              <span class="icon medium">
+                <fa-icon [icon]="faSave" size="fa-lg"> </fa-icon>
+              </span>
+              <span>Save</span>
+            </button>
+          </div>
+        </footer>
+      </div>
+    </cdk-step> 
+  </app-book-stepper>
+</form> -->
+
+<!-- <div *ngIf="frmValues" class="content has-content-centered">
+  <h3 class="subtitle">Form Values</h3>
+  {{ frmValues | json }}
+</div> -->
+
+<!-- <ng-container [ngSwitch]="stepperOrientation | async">
+    <div *ngSwitchCase="'horizontal'">Make your screen smaller to see a vertical stepper</div>
+    <div *ngSwitchCase="'vertical'">Make your screen larger to see a horizontal stepper</div>
+  </ng-container> -->
+  
+  <!-- <mat-stepper
+    class="example-stepper"
+    >
+    [orientation]="(stepperOrientation | async)!"
+    <mat-step [stepControl]="firstFormGroup" label="Fill out your name">
+      <form [formGroup]="firstFormGroup">
+        <mat-form-field appearance="fill">
+          <mat-label>Name</mat-label>
+          <input matInput placeholder="Last name, First name" formControlName="firstCtrl" required>
+        </mat-form-field>
+        <div>
+          <button mat-button matStepperNext>Next</button>
+        </div>
+      </form>
+    </mat-step>
+    <mat-step [stepControl]="secondFormGroup" label="Fill out your address">
+      <form [formGroup]="secondFormGroup">
+        <mat-form-field appearance="fill">
+          <mat-label>Address</mat-label>
+          <input matInput formControlName="secondCtrl" placeholder="Ex. 1 Main St, New York, NY"
+                 required>
+        </mat-form-field>
+        <div>
+          <button mat-button matStepperPrevious>Back</button>
+          <button mat-button matStepperNext>Next</button>
+        </div>
+      </form>
+    </mat-step>
+    <mat-step [stepControl]="thirdFormGroup" label="Fill out your phone number">
+      <form [formGroup]="thirdFormGroup">
+        <mat-form-field appearance="fill">
+          <mat-label>Phone number</mat-label>
+          <input matInput formControlName="thirdCtrl" placeholder="Ex. 12345678" required>
+        </mat-form-field>
+        <div>
+          <button mat-button matStepperPrevious>Back</button>
+          <button mat-button matStepperNext>Next</button>
+        </div>
+      </form>
+    </mat-step>
+    <mat-step>
+      <ng-template matStepLabel>Done</ng-template>
+      <p>You are now done.</p>
+      <div>
+        <button mat-button matStepperPrevious>Back</button>
+      </div>
+    </mat-step>
+  </mat-stepper> -->
